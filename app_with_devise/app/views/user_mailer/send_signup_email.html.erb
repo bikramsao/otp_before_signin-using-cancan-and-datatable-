@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Devise Demo, <%= @user.name %></h1>
+    <p>
+      You have successfully created an account,
+      your username is: <%= @user.name %>.<br>
+      your password is: <%= @user.password %>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= link_to 'Log In',new_user_session_url(@resource, confirmation_token: @token) %>
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
