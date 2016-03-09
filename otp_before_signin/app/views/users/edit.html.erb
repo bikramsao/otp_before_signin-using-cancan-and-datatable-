@@ -1,0 +1,21 @@
+<h1>Edit your profile</h1>
+
+
+
+<%= form_for(@user) do |f| %>
+	<%= render 'users/error_messages' %>	
+	<p><%= f.label :name %></p>
+	<p><%= f.text_field :name , class: 'form-control'%></p>
+
+	<p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i></p>
+	<p><%= f.password_field :password , class: 'form-control'%></p>
+ 
+	<p><%= f.label :password_confirmation %></p>
+	<p><%= f.password_field :password_confirmation , class: 'form-control'%></p>
+ 
+	<p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></p>
+	<p><%= f.password_field :current_password , class: 'form-control'%></p>
+ 
+  <p><%= f.submit "Update" , class:"btn btn-warning",class:"btn btn-info" %></p>
+<% end %>
+<%= link_to "Back", :back %> 

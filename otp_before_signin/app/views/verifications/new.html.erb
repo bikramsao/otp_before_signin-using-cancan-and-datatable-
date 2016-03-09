@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+
+		<%= form_for(@user, url: verify_user_verifications_path(@user), html: { method: 'put'} ) do |f| %>
+			<%= f.label :otp %>
+			<%= f.text_field :otp ,value: nil, class: 'form-control'%><p></p>
+			<%= link_to 'Resend OTP' ,user_verifications_path ,method: 'post'%><p></p>
+			<%= f.submit "Verify" ,class:"btn btn-info"%>
+		<% end %>
+	</div>
+</div>
